@@ -1,128 +1,155 @@
 <div  class="container">
-          <div class="row">
-            <div class="col-lg-2">
-                
-            </div>
-            <div class="col-lg-8">
-                <img src="../../../assets/img/img9.jpg" class="img-fluid" >
-            </div>
-            <div class="col-lg-2">
-               
-            </div>
-        </div>
-        <br>
+  <div class="row">
+    <div class="col-lg-2">
+        
+    </div>
+    <div class="col-lg-8">
+        <img src="../../../assets/img/img9.jpg" class="img-fluid" >
+    </div>
+    <div class="col-lg-2">
+       
+    </div>
+</div>
+<br>
 
 
 
-          <h3> ¿Como se encuentra?</h3>
-          <hr>
-        <!---fin del menu-->
-        <div class="row">
-          <div class="col-lg-6">
-        <h5 class="text-primary"> Sintomas (Si aplica)</h5>
-        <br>
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Fiebre mayor a 38 grados
-            </label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Dolor de garganta
-            </label>
-          </div>
+  <h3> Â¿Como se encuentra?</h3>
+  <hr>
+<!---fin del menu-->
+<div class="row">
+  <div class="col-lg-6">
+    <div class="mb-3">
+      <label for="exampleInputPassword1 " class="form-label text-black ">
+          <h6>Nombres y Apellidos</h6>
+      </label>
+      <input type="email" class="form-control border border-primary" [(ngModel)] ="userInfo.txtNomApe" name="first" aria-describedby="emailHelp">
+  </div>
+  <div class="mb-3">
+    <label for="exampleInputPassword1 " class="form-label text-black ">
+        <h6>Numero de Identificacion</h6>
+    </label>
+    <input type="number" class="form-control border border-primary" [(ngModel)] ="userInfo.nId" name="first"  aria-describedby="emailHelp">
+</div>
+<hr>
+<h5 class="text-primary"> Sintomas (Si aplica)</h5>
+<br>
+<div class="form-check">
+    <input class="form-check-input" type="checkbox" value=" Fiebre mayor a 38 grados" [(ngModel)] ="userInfo.option" [ngModelOptions]="{standalone: true}">
+    <label class="form-check-label" for="flexCheckDefault">
+        Fiebre mayor a 38 grados
+    </label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="Dolor de garganta" [(ngModel)] ="userInfo.option1" [ngModelOptions]="{standalone: true}">
+    <label class="form-check-label" for="flexCheckDefault">
+        Dolor de garganta
+    </label>
+  </div>
 
-          
+  
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-            <label class="form-check-label" for="flexCheckDefault">
-                Congestión nasal
-            </label>
-          </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="CongestiÃ³n nasal" [(ngModel)] ="userInfo.option2" [ngModelOptions]="{standalone: true}">
+    <label class="form-check-label" for="flexCheckDefault">
+        CongestiÃ³n nasal
+    </label>
+  </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-            <label class="form-check-label" for="flexCheckDefault">
-                Tos
-            </label>
-          </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="Tos" [(ngModel)] ="userInfo.option3" [ngModelOptions]="{standalone: true}" >
+    <label class="form-check-label" for="flexCheckDefault">
+        Tos
+    </label>
+  </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-            <label class="form-check-label" for="flexCheckDefault">
-                Dificultad para respirar
-            </label>
-          </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value=" Dificultad para respirar" [(ngModel)] ="userInfo.option4" [ngModelOptions]="{standalone: true}" >
+    <label class="form-check-label" for="flexCheckDefault">
+        Dificultad para respirar
+    </label>
+  </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-            <label class="form-check-label" for="flexCheckDefault">
-                Fatiga
-            </label>
-          </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="Fatiga" [(ngModel)] ="userInfo.option5" [ngModelOptions]="{standalone: true}">
+    <label class="form-check-label" for="flexCheckDefault">
+        Fatiga
+    </label>
+  </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-            <label class="form-check-label" for="flexCheckDefault">
-                Escalofrío
-            </label>
-          </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="EscalofrÃ­o" [(ngModel)] ="userInfo.option6" [ngModelOptions]="{standalone: true}" >
+    <label class="form-check-label" for="flexCheckDefault">
+        EscalofrÃ­o
+    </label>
+  </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-            <label class="form-check-label" for="flexCheckDefault">
-                Dolor abdominal
-            </label>
-          </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value=" Dolor abdominal" [(ngModel)] ="userInfo.option7" [ngModelOptions]="{standalone: true}" >
+    <label class="form-check-label" for="flexCheckDefault">
+        Dolor abdominal
+    </label>
+  </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" >
-            <label class="form-check-label" for="flexCheckDefault">
-                Pérdida del olfato
-            </label>
-          </div>
-          <br> <hr>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="PÃ©rdida del olfato" [(ngModel)] ="userInfo.option8" [ngModelOptions]="{standalone: true}" >
+    <label class="form-check-label" for="flexCheckDefault">
+        PÃ©rdida del olfato
+    </label>
+  </div>
+  <br> <hr>
 
-          <h5 class="text-primary"> Riesgo de contagio (Si aplica)</h5>
-          <br> 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Actualmente se encuentra en aislamiento por COVID-19
-            </label>
-          </div>
+  <h5 class="text-primary"> Riesgo de contagio (Si aplica)</h5>
+  <br> 
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value=" Actualmente se encuentra en aislamiento por COVID-19" [(ngModel)] ="userInfo.option9" [ngModelOptions]="{standalone: true}">
+    <label class="form-check-label" for="flexCheckDefault">
+        Actualmente se encuentra en aislamiento por COVID-19
+    </label>
+  </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Estuvo en contacto con una persona con COVID-19
-            </label>
-          </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="Estuvo en contacto con una persona con COVID-19" [(ngModel)] ="userInfo.option10" [ngModelOptions]="{standalone: true}">
+    <label class="form-check-label" for="flexCheckDefault">
+        Estuvo en contacto con una persona con COVID-19
+    </label>
+  </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-            Estuvo en contacto con una persona con síntomas
-            </label>
-          </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value="Estuvo en contacto con una persona con sÃ­ntomas" [(ngModel)] ="userInfo.option11" [ngModelOptions]="{standalone: true}">
+    <label class="form-check-label" for="flexCheckDefault">
+    Estuvo en contacto con una persona con sÃ­ntomas
+    </label>
+  </div>
 
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-            <label class="form-check-label" for="flexCheckDefault">
-                Hizo un viaje internacional en los últimos 30 días
-            </label>
-          </div>
+  <div class="form-check">
+    <input class="form-check-input" type="checkbox" value=" Hizo un viaje internacional en los Ãºltimos 30 dÃ­as" [(ngModel)] ="userInfo.option12" [ngModelOptions]="{standalone: true}">
+    <label class="form-check-label" for="flexCheckDefault">
+        Hizo un viaje internacional en los Ãºltimos 30 dÃ­as
+    </label>
+  </div>
 
 <br>
-            <br>
-         <button type="button" id="btnProcesor" class="btn  border btn-outline-primary" onclick="procesar()" >Aceptar</button>
-        </div>
-        <div class="col-lg-6">
-          <img src="../../../assets/img/imgcovid19.jpg" class="img-fluid" >
+    <br>
+ <button type="button" id="btnProcesor" class="btn  border btn-outline-primary" (click) = "procesar()" >Aceptar</button>
+</div>
+<div class="col-lg-6">
+  <img src="../../../assets/img/imgcovid19.jpg" class="img-fluid" >
 
-      </div>
-      </div>
-    </div>
+  <br>  <br>  <br>  <br>  
+<nav class="nav bg-secundary nav-pills flex-column flex-sm-row text-center ">
+
+  <a class="flex-sm-fill text-sm-center bg-secundary btn-outline-primary text-secundary border border-white" aria-current="page"
+
+  routerLink="/AgendaTuCita">
+
+      <h1> AGENDA TU CITA</h1>
+
+  </a>
+
+</nav>
+
+
+</div>
+</div>
+</div>

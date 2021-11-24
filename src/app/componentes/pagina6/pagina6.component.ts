@@ -7,9 +7,71 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Pagina6Component implements OnInit {
 
+  
+  newLsUser: any = [];
+
+  userInfo: any = {
+    tNombre:'', tApellido:'', Correo1:'', nTelefono:'', radio:'', nDocumento:'',
+  }
+ 
   constructor() { }
 
-  ngOnInit(): void {
-  }
 
-}
+  ngOnInit(): void {
+   
+    this.newLsUser = JSON.parse(localStorage.getItem('$key') || '{}');
+
+
+   }
+
+   Registro(){
+    let lstUsers = [];
+     if (localStorage.getItem('$key') === null){
+       lstUsers.push(this.userInfo);
+       localStorage.setItem('$key', JSON.stringify(lstUsers));
+       console.log(lstUsers);
+       
+
+     }else{
+      lstUsers = JSON.parse(localStorage.getItem('$key') || '{}');
+      lstUsers.push(this.userInfo);
+      localStorage.setItem('$key', JSON.stringify(lstUsers));
+       console.log(lstUsers);
+       window.location.reload()
+
+     }
+
+    
+   }
+
+  
+
+   delete(index: any){
+    if(confirm("Â¿Desea eliminar esta columna?")){
+
+
+      if(index){
+        console.log(index);
+        this.newLsUser.splice(index);
+        localStorage.setItem('$key',JSON.stringify(this.newLsUser));
+  
+       
+      }
+
+
+    }     
+
+     
+    }
+
+    Limpiar(){
+      if(confirm("Â¡Â¿Deseas limpiar este formulario se borraran todos los datos?!")){
+        localStorage.removeItem('$key');
+        window.location.reload()
+      }
+    }
+
+
+
+  
+   }

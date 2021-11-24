@@ -1,103 +1,92 @@
 <div class="container">
-     <div class="row">
-        <div class="col-lg-2">
-            
-        </div>
-        <div class="col-lg-8">
-            <img src="../../../assets/img/img8.jpg" class="img-fluid" >
-        </div>
-        <div class="col-lg-2">
+    <div class="row">
+       <div class="col-lg-2">
            
-        </div>
-    </div>
-    <br>
-    
+       </div>
+       <div class="col-lg-8">
+           <img src="../../../assets/img/img8.jpg" class="img-fluid" >
+       </div>
+       <div class="col-lg-2">
+          
+       </div>
+   </div>
+   <br>
+   
 <h3 class="text-primary">Formulario De Agendacion De Citas</h3>
 <br>
 
-    <div class="row">
+   <div class="row">
 
-        <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6  ">
-            <form name="registro" id="miForm" autocomplete="off">
-                <div class="mb-3">
-                    <label for="exampleInputPassword1 " class="form-label text-black ">
-                        <h6>Nombres y Apellidos</h6>
-                    </label>
-                    <input type="email" class="form-control border border-primary" id="txtNomApe" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <label for="exampleInputPassword1 " class="form-label text-black ">
-                        <h6>Numero de Identificacion</h6>
-                    </label>
-                    <input type="number" class="form-control border border-primary" id="nId" aria-describedby="emailHelp">
-                </div>
-                <div class="mb-3">
-                    <h6>Especialidades</h6>
-                    <select class="form-select form-select-sm border border-primary"
-                        aria-label=".form-select-sm example">
+       <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6  ">
+           <form name="registro" id="miForm" autocomplete="off">
+               <div class="mb-3">
+                   <label for="exampleInputPassword1 " class="form-label text-black ">
+                       <h6>Nombres y Apellidos</h6>
+                   </label>
+                   <input type="email" class="form-control border border-primary" [(ngModel)] ="userInfo.txtNomApe" name="first" aria-describedby="emailHelp">
+               </div>
+               <div class="mb-3">
+                   <label for="exampleInputPassword1 " class="form-label text-black ">
+                       <h6>Numero de Identificacion</h6>
+                   </label>
+                   <input type="number" class="form-control border border-primary" [(ngModel)] ="userInfo.nId" name="first"  aria-describedby="emailHelp">
+               </div>
+               <div class="mb-3">
+                   <h6>Especialidades</h6>
+                   <select class="form-select form-select-sm border border-primary"
+                       aria-label=".form-select-sm example">
 
-                        <option selected disabled >Seleccione...</option>
+                       <option selected disabled >Seleccione...</option>
 
-                        <option id="option1" name="opciones" value="1">Oncología Clínica - Dr. Fredy Osorio Donado. </option>
+                       <option [(ngModel)] ="userInfo.option" [ngModelOptions]="{standalone: true}"  value="1">OncologÃ­a ClÃ­nica - Dr. Fredy Osorio Donado. </option>
 
-                        <option id="option2" name="opciones" value="2"> Medicina Interna y Hematología - Dr. Ricardo Romero Villa.</option>
+                       <option [(ngModel)] ="userInfo.option" [ngModelOptions]="{standalone: true}"  value="2"> Medicina Interna y HematologÃ­a - Dr. Ricardo Romero Villa.</option>
 
-                        <option id="option3" name="opciones" value="3">Medicina Externa y Hepatología - Dra. Sol Palacios Iriarte.</option>
-                    </select>
-                    <br>
-                    <div class="row">
-                        <h6>Agenda</h6>
-                    </div>
-                    <div class="row">
-                        <div class='col-sm-6'>
-                            <form>
-                                <div class="form-group">
-                                    <div class='input-group date' id='datepicker'>
-                                        <input type='text' class="form-control border border-primary" />
-                                        <span class="input-group-addon">
-                                            <span class="glyphicon glyphicon-calendar"></span>
-                                        </span>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-                
-                 <br>
-
-                 <div class="mb-3">
-                    <label for="exampleInputPassword1 " class="form-label text-black">
-                        <h6>Direccion</h6>
-                    </label>
-                    <input type="email" class="form-control border border-primary" id="txtDireccion" aria-describedby="emailHelp">
-                </div>
-
-
+                       <option [(ngModel)] ="userInfo.option" [ngModelOptions]="{standalone: true}"  value="3">Medicina Externa y HepatologÃ­a - Dra. Sol Palacios Iriarte.</option>
+                   </select>
+                   
+               </div>
+               
                 <br>
-                <button type="button" id="btnagendar" class="btn btn-outline-primary"  onclick="agendar()">Agendar</button>
-                <br>
-                <br>
-            </form>
-        </div>
+                <div class="mb-3">
+                    <h6>Calendario</h6>
+                <label for="start"></label>
+
+                 <input type="date" [(ngModel)] ="userInfo.start" name="fieldName" ngDefaultControl
+                            value="2021-01-01"
+                           min="2021-01-01" max="2030-12-31">
+                     </div>
+                <div class="mb-3">
+                   <label for="exampleInputPassword1 " class="form-label text-black">
+                       <h6>Direccion</h6>
+                   </label>
+                   <input type="email" class="form-control border border-primary" [(ngModel)] ="userInfo.txtDireccion" name="first" aria-describedby="emailHelp">
+               </div>
+
+
+               <br>
+               <button type="button" id="btnagendar" class="btn btn-outline-primary"  (click) = "agendar()">Agendar</button>
+               <br>
+               <br>
+           </form>
+       </div>
 
 
 
 
 
-        <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6  ">
+       <div class="col-xl-6 col-lg-6  col-md-6  col-sm-6 col-6  ">
 
-            <img src="../../../assets/img/img23.jpg" class="img-fluid" >
+           <img src="../../../assets/img/img23.jpg" class="img-fluid" >
 
-        </div>
+       </div>
 
-    </div>
-    <div class="row">
-        <div class="col-lg-12">
-          <img src="../../../assets/img/img22.jpg" class="img-fluid">
-        </div> 
-    
-        
-    </div>
+   </div>
+   <div class="row">
+       <div class="col-lg-12">
+         <img src="../../../assets/img/img22.jpg" class="img-fluid">
+       </div> 
+   
+       
+   </div>
 </div>
-

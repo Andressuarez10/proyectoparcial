@@ -26,7 +26,7 @@ import { NoticiasComponent } from './paginas/noticias/noticias.component';
 import { RegistrateComponent } from './paginas/registrate/registrate.component';
 import { AgendatucitaComponent } from './paginas/agendatucita/agendatucita.component';
 import { Encuestacovid19Component } from './paginas/encuestacovid19/encuestacovid19.component';
-
+import { FormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -52,7 +52,8 @@ import { Encuestacovid19Component } from './paginas/encuestacovid19/encuestacovi
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
