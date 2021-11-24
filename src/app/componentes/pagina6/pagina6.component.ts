@@ -47,7 +47,7 @@ export class Pagina6Component implements OnInit {
   
 
    delete(index: any){
-    if(confirm("Â¿Desea eliminar esta columna?")){
+    if(confirm("¿Desea eliminar esta columna?")){
 
 
       if(index){
@@ -65,7 +65,7 @@ export class Pagina6Component implements OnInit {
     }
 
     Limpiar(){
-      if(confirm("Â¡Â¿Deseas limpiar este formulario se borraran todos los datos?!")){
+      if(confirm("¿Deseas limpiar este formulario se borraran todos los datos?!")){
         localStorage.removeItem('$key');
         window.location.reload()
       }
